@@ -1,2 +1,2 @@
-# Furu Pro
+# FURUPro
 Furuyoni Simulator
