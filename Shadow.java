@@ -1,6 +1,6 @@
-public class Dust extends ShardContainer {
+public class Shadow extends ShardContainer {
 
-    Dust(int shard_num) {
+    Shadow(int shard_num) {
         super(shard_num);
         //TODO Auto-generated constructor stub
     }
