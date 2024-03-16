@@ -12,8 +12,7 @@ public class Board {
 
     // Method
     public void arrow(ShardContainer getter, ShardContainer giver, int shard_num){
-        int movingShard = Math.min(shard_num, getter.getCapacity());
-        getter.getShard(giver.giveShard(movingShard));
+        
     }
 
     // Basic Action

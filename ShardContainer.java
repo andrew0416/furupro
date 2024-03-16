@@ -17,22 +17,30 @@ public class ShardContainer {
     public int getMaxNum() {
         return this.max_shard;
     }
-    public int getCapacity() {
-        return this.max_shard - this.skura_shard;
+    public boolean checkCapacity(int num) {
+        if (num <= 0)
+            return true;
+        else if (this.max_shard - this.skura_shard >= 0)
+            return true;
+        else
+            return false;
     }
 
     /// Move
-    public int giveShard(int num) {
-        int result = Math.min(this.getShardNum(), num);
-        this.max_shard =- result;
-        return result;
-    }
-    public boolean getShard(int num) {
-        if (num > this.getCapacity())
+    public boolean decreaseShard(int num) {
+        if (this.skura_shard < num)
             return false;
         else {
+            this.skura_shard =- num;
+            return true;
+        }
+    }
+    public boolean increaseShard(int num) {
+        if (checkCapacity(num)){
             this.skura_shard =+ num;
             return true;
         }
+        else
+            return false;
     } 
 }
