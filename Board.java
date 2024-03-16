@@ -1,7 +1,7 @@
 public class Board {
 
 
-    ShardContainer Distance = new ShardContainer(0);
+    ShardContainer Distance = new ShardContainer(10, 10);
     Player[] players = new Player[2];
 
     Board(){
@@ -12,8 +12,8 @@ public class Board {
 
     // Method
     public void arrow(ShardContainer getter, ShardContainer giver, int shard_num){
-        //
-        //
+        int movingShard = Math.min(shard_num, getter.getCapacity());
+        getter.getShard(giver.giveShard(movingShard));
     }
 
     // Basic Action
