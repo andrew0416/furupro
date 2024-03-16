@@ -1,13 +1,12 @@
 public class Board {
-    Distance distance;
-    Shadow shadow;
+
+
+    ShardContainer Distance = new ShardContainer(0);
     Player[] players = new Player[2];
 
     Board(){
-        this.distance = new Distance(10);
-        this.shadow = new Shadow(0);
         
-        this.players[0] = new Player();
+                this.players[0] = new Player();
         this.players[1] = new Player();
     }
 
